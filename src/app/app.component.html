@@ -13,11 +13,6 @@
       </div>
     </li>
   </ul>
-  <p *ngIf="tareas.length>0"><span class="badge badge-danger">{{tareas.length}}</span> Tareas pendientes</p>
-  <!-- <p *ngIf="tareas.length>0"><span class="badge badge-primary">{{tareasCompletadas}}</span> Tareas completadas</p> -->
-  <p *ngIf="tareascompletadas() > 0">
-    <span class="badge badge-success">{{ tareascompletadas() }}</span>
-    Completadas
-  </p>
+  <app-pie [totalTareas]="tareas.length" [tareasCompletadas]="tareasCompletadas()"></app-pie>
 </div>
 <!-- <input type="checkbox" class="form-check-input" [checked]="tarea.completada" (click)="toggleTarea(tarea.id)" > -->
